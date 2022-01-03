@@ -26,10 +26,10 @@ function MeditateScreen() {
   const [remaining, setRemaining] = useState(timerTotal);
   const displayTime = `${remaining/60|0}:${(remaining%60).toString().padStart(2, "0")}`;
 
-  const [meditationFinished, setMeditationFinished] = useState(false);
+  const [dingDidDoneDung, setDingDidDoneDung] = useState(false);
 
-  if (remaining == 0 && !meditationFinished) {
-    setMeditationFinished(true);
+  if (remaining == 0 && !dingDidDoneDung) {
+    setDingDidDoneDung(true);
     ding();
   }
 
@@ -48,7 +48,7 @@ function MeditateScreen() {
   })
 
   function startMeditating() {
-    setMeditationFinished(false);
+    setDingDidDoneDung(false);
     setMeditationStartTime(performance.now());
   }
 
