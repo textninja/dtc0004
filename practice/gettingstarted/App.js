@@ -1,4 +1,4 @@
-import App from "./examples/4";
+import App from "./examples/5";
 
 /**
  * Examples include:
@@ -7,6 +7,7 @@ import App from "./examples/4";
  *  2. Unlisted
  *  3. Translator (text input + state)
  *  4. ScrollView
+ *  5. FlatList
  * 
  */
 
