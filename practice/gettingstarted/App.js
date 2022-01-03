@@ -2,34 +2,37 @@ import React from 'react';
 const { useState } = React;
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
-const defaultName = "Joe";
 
-const reallyBigText = {
-  fontSize: 40
-};
+const Cat = () => {
+  return (
+    <View>
+        <Text>This is a cat.</Text>
+    </View>
+  );
+}
 
+const CatCafe = ({ cats=10 }) => {
+  return (
+    <View>
+      <Text>Welcome to the cat cafe!</Text>
 
-const bigText = {
-  fontSize: 20
+      <View style={{ marginTop: 10 }}>
+      {
+        Array(cats).fill(0).map(c => <Cat/>)
+      }
+      </View>
+    </View>
+  );
 }
 
 const App = () => {
 
-  const [name, setName] = useState(defaultName);
-
-  const displayName = name ? name : "friend";
-
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={reallyBigText}>Hello, {displayName}!</Text>
-
-      <Text style={{...bigText, marginTop: 40, marginBottom: 20}}>Try changing your name.</Text>
-      <TextInput
-        style={{...bigText, borderColor: "black", borderWidth: 1, padding: 10, width: 200 }}
-        defaultValue={defaultName}
-        onChangeText={(text) => setName(text)} />
+    <View style={{flex: 1, justifyContent: "center", marginLeft: 20 }}>
+      <CatCafe cats={5} />
     </View>
   );
-}
+
+};
 
 export default App;
