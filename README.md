@@ -1,9 +1,9 @@
 # Daily Tech Challenge #4
 
-For this challenge, I aimed to learn React Native well enough to create a simple
-meditation timer. The final product is in the meditationtimer folder. It's a
-timer that counts down from 10 minutes and plays a bell sound when it begins and
-ends.
+For this challenge, I needed to learn React Native well enough to create a
+simple meditation timer. I succeeded in this venture; the final product is in
+the meditationtimer folder. It's a timer that counts down from 10 minutes and
+plays a bell sound when it begins and ends.
 
 I used the following to build it:
 
